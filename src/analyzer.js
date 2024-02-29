@@ -43,20 +43,47 @@ const analyzer = {
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
     //declarar un campo array/lista
-    const numbers = [] //pregunta si es un numero
-    for (let i = 0; i < text.length; i++) {
-      if (["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."].includes(text[i])) { //si encontro un numero
-        //Verifica si es una lista de numeros)
-        let number = ""
+    /*     const numbers = [] //variable que se inicializa como un arreglo vacio
+        for (let i = 0; i < text.length; i++) { //para iterar y que el valor sume 1
+          if (["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."].includes(text[i])) { //si encontro un numero
+            //Verifica si es una lista de numeros)
+            let number = ""
+            do {
+              number += text[i] //concatena la cadena de lo consultado anteriormente en el elemeto text en la posición i
+              i++
+            } while (["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."].includes(text[i]) && i < text.length) //para seguir iterando
+            //Verifica si es una lista de numeros
+            if (number !== "" || text[i-1]=== " "){ //si el numero es distinto de vacio
+              console.log(i, text[i])
+              numbers.push(number) }//guarda el numero al final de la ultima posicion del arreglo
+            i-- //
+          }
+        } */
+
+    const word = text.split(" ")
+    let numbers = []
+    let numberLength = 0
+
+    for (let i = 0; i < word.length; i++) {
+      const number = word[i]
+      console.log(number)
+      for (let j = 0; j < number.length; j++) {
+        console.log(number[j])
+        if (!["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."].includes(number[j])) {
+          numberLength = numberLength === 0? 0: numbers.length-1
+          break
+        }
+        let iterationNumber = ""
         do {
-          console.log(number)
-          number += text[i]
-          i++
-        } while (["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."].includes(text[i]) && i < text.length)
-        //Verifica si es una lista de numeros
-        if (number !== "") //si el numero es distinto de vacio
-          numbers.push(number)
-        i--
+          iterationNumber += number[j]
+          j++
+        }
+        while (["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."].includes(number[j]) && j < number.length) {
+          if (iterationNumber !== "") {
+            numbers.push(iterationNumber)
+            numberLength = numbers.length
+          }
+        }
       }
     }
     return numbers.length
@@ -74,3 +101,4 @@ const analyzer = {
 };
 
 export default analyzer;
+

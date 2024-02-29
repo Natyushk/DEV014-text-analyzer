@@ -29,11 +29,20 @@
     <li>
       Promedio longitud: 0
     </li>
+  
   </ul>
-  <textarea></textarea>
-
+  <textarea id="textInput"></textarea>
+  <button onclick="limpiar()">Limpiar</button>
 
   <footer>Nataly Molano</footer>
+
+  <script src="index.js" type="module"></script>
+  <script>
+    // Definir la función para limpiar el texto
+    function limpiar() {
+      document.getElementById('textInput').value = ''; // Establecer el valor del textarea como una cadena vacía
+    }
+  </script>
 
 </body>
 
