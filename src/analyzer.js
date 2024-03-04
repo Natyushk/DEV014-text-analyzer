@@ -142,6 +142,7 @@ const analyzer = {
     }
     const add = numbers.reduce((total, value) => total + value, 0);
     return add
-  };
+  },
+};
 
-  export default analyzer;
+export default analyzer;
