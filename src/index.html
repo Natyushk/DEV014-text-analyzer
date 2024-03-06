@@ -1,49 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Analizador de texto</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <script src="index.js" type="module"></script>
-  <h1>Analizador de texto</h1> 
-  <ul>
-    <li>
-      Caracteres: 0
-    </li>
-    <li>
-      Caracteres sin espacio: 0
-    </li>
-    <li>
-      Palabras: 0
-    </li>
-    <li>
-      Números: 0
-    </li>
-    <li>
-      Suma Números: 0
-    </li>
-    <li>
-      Promedio longitud: 0
-    </li>
+  <header>
+    <h1>Analizador de texto</h1> 
+  </header>
+  <main>
+    <img 
+      src="https://blogs.iadb.org/conocimiento-abierto/wp-content/uploads/sites/10/2018/09/banner-smartreader-herramienta-de-analisis-de-texto.png" 
+      alt="Analizador de texto">
+    <textarea name="user-input" placeholder="Ingresa tu texto aquí..."></textarea>
+    <ul>
+      <li class="list" data-testid="character-count">Caracteres: 0  </li> 
+      <li class="list" data-testid="character-no-spaces-count">Caracteres sin espacio: 0</li>
+      <li class="list" data-testid="word-count">Palabras: 0</li>
+      <li class="list" data-testid="number-count">Números: 0</li>
+      <li class="list" data-testid="number-sum">Suma Números: 0</li>
+      <li class="list" data-testid="word-length-average">Promedio longitud: 0</li>
+    </ul>
+
+    <button id="reset-button">Limpiar</button>
+  </main>
   
-  </ul>
-  <textarea id="textInput"></textarea>
-  <button onclick="limpiar()">Limpiar</button>
-
-  <footer>Nataly Molano</footer>
+  <footer>
+    <p> Nataly Molano </p>
+  </footer>
 
   <script src="index.js" type="module"></script>
-  <script>
-    // Definir la función para limpiar el texto
-    function limpiar() {
-      document.getElementById('textInput').value = ''; // Establecer el valor del textarea como una cadena vacía
-    }
-  </script>
-
+ 
 </body>
 
 </html>
