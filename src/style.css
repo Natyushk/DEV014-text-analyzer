@@ -2,35 +2,53 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url("https://www.lifeder.com/wp-content/uploads/2020/09/concepto-chica-leer-escribir-imaginando-min-1024x537.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-header, footer {
-    background-color: #f8f5f5;
-    color: #087aec;
+header{
+    background-color: rgba(95, 142, 243, 0.578);
+    color: #000103;
     text-align: center;
     padding: 20px;
 }
 
-main {
-    padding: 20px;
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(95, 142, 243, 0.578);
+  color: #000103;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
 }
 
-img {
-    width: 100px; /* Ancho deseado */
-    height: auto; /* Altura automática para mantener la proporción */
-    margin-bottom: 20px; /* Margen inferior para separar la imagen del textarea */
+main {
+    padding: 20px;
+    text-align: center;
+    display: block;
 }
 
 textarea[name="user-input"] {
     background-color: rgb(500, 500, 500);
-    border: 1px solid #ccc;
+    border: 1px solid #fffefe;
     text-align: justify;
     margin: 10px;
+    width: 60%;
+    height: 20%;
+
 }
 
 ul {
     list-style-type: none;
-    padding: 0;
+    padding: 2%;
+    width: 30%;
+    background-color: #d9f3f2b9;
+    text-align: center;
+    margin: auto;
 }
 
 .list {
@@ -45,6 +63,7 @@ ul {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 15px;
 }
 
 button:hover {
